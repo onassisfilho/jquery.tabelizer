@@ -38,8 +38,9 @@
 		$row = $elm;
 		
 		var id = $row.attr('id');
-		
-		if (!row.hasClass('childless')){
+
+		//variable Row was without $. When using the plugin the error :"row was not defined" was appearing.
+		if (!$row.hasClass('childless')){
 			//Simple toggle for contract/expand logic
 			if ($row.hasClass('contracted')){
 				$row.removeClass('contracted').addClass('expanded');
